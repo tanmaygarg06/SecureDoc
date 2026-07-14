@@ -18,7 +18,7 @@
 
 [[redirects]]
   from   = "/api/*"
-  to     = "https://YOUR-BACKEND-URL.com/api/:splat"
+  to     = "https://securedoc-mane.onrender.com/api/:splat"
   status = 200
   force  = true
 
