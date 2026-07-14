@@ -27,8 +27,7 @@ objects in S3 as well.
 
 ---
 
-## Live Link
-delicate-donut-633227.netlify.app
+🔗 **Live Demo:** [delicate-donut-633227.netlify.app](https://delicate-donut-633227.netlify.app/)
 
 ---
 
