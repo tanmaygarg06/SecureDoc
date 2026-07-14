@@ -1,0 +1,23 @@
+# Environment variables — never commit real secrets
+.env
+.env.*
+!.env.example
+!env.example
+
+# Dependencies
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Logs
+npm-debug.log*
+*.log
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Build output (if you ever add one)
+dist/
+build/

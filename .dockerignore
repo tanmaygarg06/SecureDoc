@@ -1,0 +1,30 @@
+# Environment variables - never bake secrets into the image
+.env
+.env.*
+!.env.example
+!env.example
+
+# Dependencies (installed fresh inside the image)
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Git
+.git/
+.gitignore
+
+# Logs
+npm-debug.log*
+*.log
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Docs (not needed inside the image)
+README.md
+
+# Build output
+dist/
+build/

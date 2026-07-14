@@ -1,0 +1,30 @@
+## Netlify configuration for SecureDocs
+#
+# This project has two parts:
+#   1. frontend/  -> static HTML/CSS/JS  -> deployed on Netlify (this file)
+#   2. backend/   -> Node/Express API (S3, auth, etc.) -> Netlify cannot run
+#      a long-running Express/Node server, so the backend must be deployed
+#      separately (Render, Railway, EC2, Elastic Beanstalk, etc.).
+#
+# Once your backend is deployed, replace YOUR-BACKEND-URL below with its
+# real URL. This redirect lets the frontend keep calling relative "/api/..."
+# paths (exactly as it does today, unchanged), while Netlify transparently
+# forwards those requests to your backend.
+
+[build]
+  base    = ""
+  publish = "frontend"
+  command = ""
+
+[[redirects]]
+  from   = "/api/*"
+  to     = "https://YOUR-BACKEND-URL.com/api/:splat"
+  status = 200
+  force  = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

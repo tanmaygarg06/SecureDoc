@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin Dashboard · SecureDocs</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div class="topbar" id="topbar-root"></div>
+
+    <div class="main">
+      <div class="page-header">
+        <div>
+          <h2>Admin Dashboard</h2>
+          <p>All registered users on the platform</p>
+        </div>
+      </div>
+
+      <div class="stat-strip" id="stat-strip"></div>
+
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Joined</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="user-list">
+            <tr><td colspan="5"><div class="spinner-wrap"><span class="loading-spinner spinner-dark"></span></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Browse a selected user's files -->
+      <div id="browse-section" style="display:none; margin-top:30px;">
+        <div class="page-header">
+          <div>
+            <h2 id="browse-title">Files</h2>
+            <p>View, download, or remove this user's documents</p>
+          </div>
+          <div class="actions">
+            <button class="btn btn-outline" id="close-browse">Close</button>
+          </div>
+        </div>
+        <div class="breadcrumb" id="admin-breadcrumb"></div>
+        <div class="card">
+          <table>
+            <thead>
+              <tr><th>Name</th><th>Size</th><th>Last Modified</th><th></th></tr>
+            </thead>
+            <tbody id="admin-file-list"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="delete-file-modal">
+    <div class="modal">
+      <h3>Delete item?</h3>
+      <p id="delete-file-message" style="color:var(--text-muted); font-size:14px;"></p>
+      <div class="modal-actions">
+        <button class="btn btn-outline" id="delete-file-cancel">Cancel</button>
+        <button class="btn btn-danger" id="delete-file-confirm">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="remove-user-modal">
+    <div class="modal">
+      <h3>Remove user?</h3>
+      <p id="remove-user-message" style="color:var(--text-muted); font-size:14px;"></p>
+      <div class="modal-actions">
+        <button class="btn btn-outline" id="remove-user-cancel">Cancel</button>
+        <button class="btn btn-danger" id="remove-user-confirm">Remove</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

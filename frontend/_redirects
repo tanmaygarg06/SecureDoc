@@ -1,0 +1,3 @@
+# Netlify redirects (fallback to netlify.toml).
+# Update YOUR-BACKEND-URL to your deployed backend's real URL.
+/api/*  https://YOUR-BACKEND-URL.com/api/:splat  200!

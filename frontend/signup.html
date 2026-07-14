@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sign Up · SecureDocs</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="auth-page mirror">
+    <div class="auth-visual">
+      <div class="visual-content">
+        <div class="vault-stage">
+          <div class="abstract-shape shape-1"></div>
+          <div class="abstract-shape shape-2"></div>
+          <div class="abstract-shape shape-3"></div>
+          <div class="file-chip c1"><span class="lock">🔒</span> tax_return.pdf</div>
+          <div class="file-chip c2"><span class="lock">🔒</span> passport_scan.jpg</div>
+          <div class="file-chip c3"><span class="lock">🔒</span> notes.docx</div>
+        </div>
+
+        <div class="visual-eyebrow"><span class="dot"></span> FREE PRIVATE VAULT</div>
+        <h1>Your own <span class="hl">encrypted vault</span> in the cloud.</h1>
+        <p class="lede">Create an account and get a private, isolated storage space — built on S3, protected behind your login, ready in seconds.</p>
+        <ul class="visual-features">
+          <li><span class="check">✓</span> No one else can see your files, ever</li>
+          <li><span class="check">✓</span> Drag, drop, and organize into folders</li>
+          <li><span class="check">✓</span> Free to get started, upgrade anytime</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="auth-form-panel">
+      <div class="auth-card">
+        <div class="brand"><span class="logo">☁</span> SecureDocs</div>
+        <h1>Create your account</h1>
+        <p class="subtitle">Start storing your documents securely</p>
+
+        <div class="error-msg" id="error-box"></div>
+
+        <form id="signup-form">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" required placeholder="Jane Doe" autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" required placeholder="you@example.com" autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="pw-field">
+              <input type="password" id="password" required placeholder="At least 6 characters" minlength="6" autocomplete="new-password" />
+              <button type="button" class="pw-toggle" id="pw-toggle" aria-label="Show password"></button>
+            </div>
+            <div class="pw-strength" id="pw-strength">
+              <div class="track"><div class="seg"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div></div>
+              <div class="label" id="pw-strength-label">Enter a password</div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" id="submit-btn">Create Account</button>
+        </form>
+
+        <p class="foot-note">Already have an account? <a href="index.html">Sign in</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/signup.js"></script>
+</body>
+</html>
